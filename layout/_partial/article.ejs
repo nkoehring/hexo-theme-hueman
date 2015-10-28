@@ -7,7 +7,7 @@
         <p class="date"><time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date) %></time></p>
       </div>
       <h2 class="article-title">
-        <a href="<%- url_for((post.link?post.link:post.path)) %>" class="title"><%= post.title %></a>
+        <a href="<%- post.path %>" class="title"><%= post.title %></a>
       </h2>
       <p class="article-excerpt">
         <% var excerpt;
@@ -26,7 +26,9 @@
       <!-- <%- partial('post/gallery') %> -->
       <% if (post.link || post.title){ %>
         <header class="article-header">
-          <%- partial('post/title', {class_name: 'article-title'}) %>
+          <a href="/">
+            <%- partial('post/title', {class_name: 'article-title'}) %>
+          </a>
         </header>
       <% } %>
       <p class="article-byline">
@@ -36,10 +38,7 @@
         <%- post.content %>
       </div>
       <footer class="article-footer">
-        <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><i class="fa fa-share"></i><%=__('article.share')%></a>
-        <% if (post.comments && config.disqus_shortname){ %>
-          <a href="<%- post.permalink %>#comments" class="article-comment-link"><i class="fa fa-comments"></i><%=__('article.comments')%></a>
-        <% } %>
+        <a style="float:right;" href="/">back home</a>
         <%- partial('post/tag') %>
       </footer>
     </div>

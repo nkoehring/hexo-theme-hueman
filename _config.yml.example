@@ -1,7 +1,7 @@
 # Logo Url
 # Please enter an absolute path to your logo file
 # or remove the following line with replacing logo-header.png with your own logo
-logo:
+#logo:
 
 # Header
 menu:
@@ -14,7 +14,7 @@ menu:
 groupByYear: true
 
 # Content
-fancybox: true
+fancybox: false
 
 # Thumbnail
 thumbnail: true
@@ -23,7 +23,7 @@ thumbnail: true
 scrollLoading: true
 
 # Sidebar
-sidebar: left # sidebar's position (left or right)
+sidebar: right # sidebar's position (left or right)
 social_links:
   twitter:
   facebook:

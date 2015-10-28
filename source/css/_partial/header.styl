@@ -1,6 +1,6 @@
 #header
-  background: color-header-background
-  padding-bottom: nav-height
+  background: background-image
+  padding: 50px 0
   position: relative
 
 #header-outer
@@ -12,16 +12,23 @@
 
 #header-title
   clearfix()
+  margin-top: 120px
+  height: 130px
   text-align: center
-  padding: 30px 30px
-  .logo-wrap, .subtitle-wrap
-    float: left
+  .title-wrap, .logo-wrap, .subtitle-wrap
+    display: inline-block;
+  .title
+    font-family: font-title
+    color: color-nav-foreground
+    font-size: 60px
+    transform: rotate(-20deg)
   .subtitle-wrap
-    padding: 10px 0px 0px
-    margin-left: 20px
+    padding: 0
+    margin-bottom: -5px
+    margin-left: -165px
+    vertical-align: bottom
   .subtitle
     font-size: 16px
     font-style: italic
-    line-height: logo-height + 10
     color: color-nav-foreground
     text-shadow: 0 1px rgba(0, 0, 0, 0.2)

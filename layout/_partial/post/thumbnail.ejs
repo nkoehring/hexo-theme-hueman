@@ -1,5 +1,5 @@
 <% if(theme.thumbnail == true) { %>
-<a href="<%- url_for((post.link?post.link:post.path)) %>" class="thumbnail">
+<a href="/<%- post.path %>" class="thumbnail">
   <%
     var img=/\<img\s.*?\s?src\s*=\s*['|"]?([^\s'"]+).*?\>/ig;
     var result = post.content.match(img);
